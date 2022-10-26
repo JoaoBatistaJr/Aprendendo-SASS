@@ -24,7 +24,7 @@ Imagine que você precisa estilizar um botão simples, que mude a sua cor ao pas
 
 Em CSS ficaria assim:
 
-```css
+```scss
 .botao{
   padding: 15px 40px;
   border-radius: 5px;
