@@ -7,6 +7,7 @@
  - [**Importação**](importacao)
  - [**Mixins**](mixins)
  - [**Funções**](funcoes)
+ - [**Estrutura de Arquivos**](estrutura)
 
 <img aling-itens="center" height="150px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" />
 
@@ -15,7 +16,7 @@ Este tutorial tem como objetivo uma rápida demonstração das principais funcin
 
 O SASS (Syntactically Awesome Style Sheets), é um dos principais pre-processadores para CSS, que serve basicamente para facilitar a codar CSS, com essa linguagem é possível escrever códigos mais limpos, ajudando a escrever menos código e também tornando a leitura mais tranquila.
 
-Para instalar o SASS em sua máquina basta seguir simples o passo a passo do [**Site Oficial**](https://sass-lang.com/install), só copiar e colar.
+Para instalar o SASS em sua máquina basta seguir o passo a passo do [**Site Oficial**](https://sass-lang.com/install), só copiar e colar.
 
 ### **Exemplo de Código**
 
@@ -23,7 +24,7 @@ Imagine que você precisa estilizar um botão simples, que mude a sua cor ao pas
 
 Em CSS ficaria assim:
 
-```scss
+```css
 .botao{
   padding: 15px 40px;
   border-radius: 5px;
@@ -49,8 +50,8 @@ Já com SASS esse mesmo trecho de código ficaria assim:
   font-weight: 600;
   color: #fbfbfb;
   :hover{
-  background-color: #3131ca;
-  cursor: pointer;
+    background-color: #3131ca;
+    cursor: pointer;
   }
 }
 ```
@@ -98,5 +99,11 @@ Feito isso é podemos usa-las como desejar, veja ainda no exemplo do botão:
 <a id="funcoes"></a>
 
 ## **Funções**
+
+[Retornar ao topo](#topo)
+
+<a id="estrutura"></a>
+
+## **Estrutura de Arquivos**
 
 [Retornar ao topo](#topo)
