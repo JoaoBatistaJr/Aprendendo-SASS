@@ -56,7 +56,7 @@ Já com Sass esse mesmo trecho de código ficaria assim:
 }
 ```
 
-Essa funcionalidade se chama **Aninhamento**, a primeira vista não parece ter mudado muito, mas imagine um arquivo CSS com sentenas de linhas e vários blocos de código, para tratar de um mesmo elemento. Com o Sass você faz tada a codificação do elemento dentro de somente um bloco de código.
+Essa funcionalidade se chama **Aninhamento**, a primeira vista não parece ter mudado muito, mas imagine um arquivo CSS com centenas de linhas e vários blocos de código, para tratar de um mesmo elemento. Com o Sass você faz tada a codificação do elemento dentro de somente um bloco de código.
 
 Mas não é só isso que é possível fazer com o Sass, também podemos criar Variáveis, Importações, Mixins e Funções. Tudo isso eu irei mostrar no decorrer da leitura. E ao final criarei um projetinho passo a passo para você aprender na prática a utilizar essa linguagem tão legal.
 
@@ -141,17 +141,48 @@ Fazendo isso, tornamos o estilo, um padrão que pode ser usado a qualquer moment
 }
 ```
 
-
 [Retornar ao topo](#topo)
 
 <a id="funcoes"></a>
-
 ## **Funções**
+
+Com as Funções **(```@function```)** você pode realizar operações complexas e retornar valores usando a regra **(```@return```)**, dirente dos mixins as funções retornam só um valor. Veja o exemplo:
+
+```scss
+@function pow($base, $exponent) {
+  $result: 1;
+  @for $_ from 1 through $exponent {
+    $result: $result * $base;
+  }
+  @return $result;
+}
+
+.sidebar {
+  float: left;
+  margin-left: pow(4, 3) * 1px;
+}
+```
+
+E claro também é possível adicionar argumentos às funções:
+
+```scss
+@function invert($color, $amount: 100%) {
+  $inverse: change-color($color, $hue: hue($color) + 180);
+  @return mix($inverse, $color, $amount);
+}
+
+$primary-color: #036;
+.header {
+  background-color: invert($primary-color, 80%);
+}
+```
 
 [Retornar ao topo](#topo)
 
 <a id="estrutura"></a>
 
 ## **Estrutura de Arquivos**
+
+
 
 [Retornar ao topo](#topo)
