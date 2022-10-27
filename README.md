@@ -4,10 +4,10 @@
 
 ## **Sumário**
  - [**Variáveis**](#variaveis)
- - [**Importação**](importacao)
- - [**Mixins**](mixins)
- - [**Funções**](funcoes)
- - [**Estrutura de Arquivos**](estrutura)
+ - [**Importação**](#importacao)
+ - [**Mixins**](#mixins)
+ - [**Funções**](#funcoes)
+ - [**Estrutura de Arquivos**](#estrutura)
 
 <img aling-itens="center" height="150px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" />
 
