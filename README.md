@@ -183,6 +183,6 @@ $primary-color: #036;
 
 ## **Estrutura de Arquivos**
 
-
+A medida que o projeto vai crescendo e tornando mais complexo, a qualitidade de arquivos vai aumentando, e uma boa organização se torna essencial.
 
 [Retornar ao topo](#topo)
