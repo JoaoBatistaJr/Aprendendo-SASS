@@ -14,8 +14,8 @@
  - [**Mixins**](#mixins)
  - [**Funções**](#funcoes)
  - [**Estrutura de Arquivos**](#estrutura)
- - [**Projeto**](#projeto)
- - [**Referencias**](#referencias)
+ - [**Mini-Projeto**](#projeto)
+ - [**Referências**](#referencias)
 
 <img aling-itens="center" height="150px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" />
 
@@ -138,8 +138,9 @@ body{
 ```
 Fazendo isso, tornamos o estilo, um padrão que pode ser usado a qualquer momento, usamos a diretiva **```@include```** para isso.
 
-Também podermos adicionar mudanças a esse estilo, para isso usamos os **argumentos** dentro dos mixins. Veja no exemplo:
+Também podermos adicionar mudanças a esse estilo, para isso usamos os **argumentos** dentro dos mixins. 
 
+Veja no exemplo:
 ```scss
 @mixin botao($font-color, $font-size: 1em) {
   font-size: $font-size;
@@ -158,7 +159,7 @@ Também podermos adicionar mudanças a esse estilo, para isso usamos os **argume
 <a id="funcoes"></a>
 ## **Funções**
 
-Com as Funções **(```@function```)** você pode realizar operações complexas e retornar valores usando a regra **(```@return```)**, diferente dos mixins, as funções retornam só um valor. 
+Com as Funções **(```@function```)** você pode realizar operações complexas e retornar valores usando a regra **```@return```**, diferente dos mixins, as funções retornam só um valor. 
 
 Veja o exemplo:
 
