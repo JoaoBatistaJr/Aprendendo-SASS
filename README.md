@@ -24,7 +24,16 @@ Este tutorial tem como objetivo, uma rápida demonstração das principais funci
 
 O SASS (Syntactically Awesome Style Sheets), é um dos principais pre-processadores para CSS, ele serve basicamente para facilitar a codificação CSS, com o Sass seus codigos ficam mais bem organizados e faceis de ler e consequentemente mais faceis de dar manutenção em seus projetos.
 
-Para instalar o Sass em sua máquina basta seguir o passo a passo do [**Site Oficial**](https://sass-lang.com/install), é bem simples, é só copiar e colar comandos no seu terminal.
+Para instalar o Sass em sua máquina basta inserir a seguinte linha de comando em seu terminal, pode ser no terminal do VS Code cosa esteja-o usando:
+
+```shell
+npm install -g sass
+```
+
+Pronto! após a instalação você pode verificar a versão com o comando:
+```shell
+sass --version
+```
 
 ### **Exemplo de Código**
 
@@ -214,6 +223,9 @@ _layout.sass - Aqui fica todo código que trata do layout da página.
 _componentes.sass - Aqui fica tudo que pode ser reutilizado como botões etc.
 _main.sass - Esse arquivo será responsável pelas importações dos demais arquivos acima.
 ```
+
+Além disso, é importante criar uma folha de estilo para cada página de seu site, caso tenha mais de uma, ela deve ser nomeada com o mesmo nome da página seguindo o padrão da estrutura assim: **_pagina.sass**.
+
 [Retornar ao topo](#topo)
 
 
