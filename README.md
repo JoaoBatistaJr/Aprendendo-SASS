@@ -8,6 +8,7 @@
 
 
 ## **Sumário**
+ - [**Introdução**](#intro)
  - [**Variáveis**](#variaveis)
  - [**Importação**](#importacao)
  - [**Mixins**](#mixins)
@@ -19,17 +20,17 @@
 <img aling-itens="center" height="150px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" />
 
 ## **Introdução**
-Este tutorial tem como objetivo uma rápida demonstração das principais funcinalidades diponíveis na linguagem de pre-processamento para CSS, como também sua estrutura e padrão de organização de arquivos. Para um estudo mais aprofundado sobre a linguagem, acesse a **[Documentação Oficial](https://sass-lang.com/guide)**.
+Este tutorial tem como objetivo, uma rápida demonstração das principais funcinalidades diponíveis na linguagem Sass, que é um pre-processador para CSS, como também sua estrutura de organização de arquivos. Para um estudo mais aprofundado sobre a linguagem, acesse a **[Documentação Oficial](https://sass-lang.com/guide)**. Ao final criarei um mini-projeto para aprender-mos na prática a utilizar o que foi abordado.
 
-O SASS (Syntactically Awesome Style Sheets), é um dos principais pre-processadores para CSS, que serve basicamente para facilitar a codar CSS, com essa linguagem é possível escrever códigos mais limpos, ajudando a escrever menos código e também tornando a leitura mais tranquila.
+O SASS (Syntactically Awesome Style Sheets), é um dos principais pre-processadores para CSS, ele serve basicamente para facilitar a codificação CSS, com o Sass seus codigos ficam mais bem organizados e faceis de ler e consequentemente mais faceis de dar manutenção em seus projetos.
 
-Para instalar o Sass em sua máquina basta seguir o passo a passo do [**Site Oficial**](https://sass-lang.com/install), só copiar e colar.
+Para instalar o Sass em sua máquina basta seguir o passo a passo do [**Site Oficial**](https://sass-lang.com/install), é bem simples, é só copiar e colar comandos no seu terminal.
 
 ### **Exemplo de Código**
 
-Imagine que você precisa estilizar um botão simples, que mude a sua cor ao passar o cursor do mouse por cima e também altere o icone do curso para a "mãozinha". 
+Imagine que você precisa estilizar um botão simples, que mude de cor ao passar o cursor do mouse por cima e também altere o icone do curso para aquela "mãozinha". 
 
-Em CSS ficaria assim:
+Fazer isso usando CSS ficaria assim:
 
 ```scss
 .botao{
@@ -46,7 +47,7 @@ Em CSS ficaria assim:
 }
 ```
 
-Já com Sass esse mesmo trecho de código ficaria assim:
+Agora usando Sass esse mesmo trecho de código fica assim:
 
 ```scss
 .botao{
@@ -63,9 +64,9 @@ Já com Sass esse mesmo trecho de código ficaria assim:
 }
 ```
 
-Essa funcionalidade se chama **Aninhamento**, a primeira vista não parece ter mudado muito, mas imagine um arquivo CSS com centenas de linhas e vários blocos de código, para tratar de um mesmo elemento. Com o Sass você faz tada a codificação do elemento dentro de somente um bloco de código.
+Essa funcionalidade se chama **Aninhamento**, onde em vez de criar vários blocos de código, um para cada alteração, com o Sass você faz toda a codificação do elemento dentro de somente um bloco de código. A primeira vista não parece ter mudado muito, mas imagine um arquivo CSS com centenas de linhas e vários blocos de código, ler e dar manutenção a cada bloco de codigo individualmente se torna bem mais trabalhoso sem o Sass.
 
-Mas não é só isso que é possível fazer com o Sass, também podemos criar Variáveis, Importações, Mixins e Funções. Tudo isso eu irei mostrar no decorrer da leitura. E ao final criarei um projetinho passo a passo para você aprender na prática a utilizar essa linguagem tão legal.
+Mas não é só isso que é possível fazer com o Sass, também podemos criar **Variáveis**, **Importações**, **Mixins** e **Funções**. Tudo isso você irá ver no decorrer da leitura. E no final quando estivermos codando o mini-projeto, você irá entender melhor tudo isso.
 
 <a id="variaveis"></a>
 
@@ -78,7 +79,7 @@ $cor_principal:#5352ed;
 $cor_secundaria:#3131ca;
 $tipografia: Arial;
 ```
-No Sass usa-se o caractere especial **$** (Dollar Sign), no inicio de cada variável.
+No Sass, usa-se o caractere especial **$** (Dollar Sign), no inicio de cada variável.
 
 Feito isso, podemos usa-las como desejar, veja ainda no exemplo do botão:
 
@@ -88,6 +89,7 @@ Feito isso, podemos usa-las como desejar, veja ainda no exemplo do botão:
   font-family: $tipografia;
   :hover{
     background-color: $cor_secundaria;
+    cursor: pointer;
   }
 }
 ```
@@ -97,7 +99,7 @@ Feito isso, podemos usa-las como desejar, veja ainda no exemplo do botão:
 
 ## **Importação**
 
-A importação (**```@import```**) no Sass funciona igual como nas linguagens de programação, você consegue acesso a outros arquivos Sass e CSS, possibilitando importar **mixins**, **funções**, **variáveis** e também consiliar com o código CSS de outros arquivos de folha de estilo.
+A importação (**```@import```**) no Sass funciona igual como nas linguagens de programação, você consegue acesso a outros arquivos Sass, possibilitando importar **mixins**, **funções**, **variáveis** e também consiliar com o código CSS de outros arquivos de folha de estilo.
 
 A seguir alguns exemplos:
 ```scss
@@ -105,7 +107,7 @@ A seguir alguns exemplos:
 @import "cor_secundaria";
 @import "tipografia";
 ```
-Veremos mais detalhadamente sobre a importação quando formos codar nosso projetinho, inclusive a importação de folhas de estilo, que ainda abordei nesse momento.
+Veremos mais detalhadamente sobre a importação quando formos implementar nosso projeto, inclusive a importação de folhas de estilo, que ainda não citei até esse momento.
 
 [Retornar ao topo](#topo)
 
@@ -126,6 +128,7 @@ Veja o nosso exemplo do botão:
   font-weight: 600;
   :hover{
     background-color: $cor_secundaria;
+    cursor: pointer;
   }
 }
 
@@ -133,7 +136,9 @@ body{
   @include botao;
 }
 ```
-Fazendo isso, tornamos o estilo, um padrão que pode ser usado a qualquer momento, usamos a diretiva **```@include```** para isso. Mas também podermos adicionar mudanças a esse estilo, para isso usamos os **argumentos** dentro dos mixins. Veja no exemplo:
+Fazendo isso, tornamos o estilo, um padrão que pode ser usado a qualquer momento, usamos a diretiva **```@include```** para isso.
+
+Também podermos adicionar mudanças a esse estilo, para isso usamos os **argumentos** dentro dos mixins. Veja no exemplo:
 
 ```scss
 @mixin botao($font-color, $font-size: 1em) {
@@ -153,7 +158,9 @@ Fazendo isso, tornamos o estilo, um padrão que pode ser usado a qualquer moment
 <a id="funcoes"></a>
 ## **Funções**
 
-Com as Funções **(```@function```)** você pode realizar operações complexas e retornar valores usando a regra **(```@return```)**, dirente dos mixins as funções retornam só um valor. Veja o exemplo:
+Com as Funções **(```@function```)** você pode realizar operações complexas e retornar valores usando a regra **(```@return```)**, diferente dos mixins, as funções retornam só um valor. 
+
+Veja o exemplo:
 
 ```scss
 @function pow($base, $exponent) {
@@ -170,7 +177,7 @@ Com as Funções **(```@function```)** você pode realizar operações complexas
 }
 ```
 
-E claro também é possível adicionar argumentos às funções:
+E claro, também é possível adicionar argumentos às funções:
 
 ```scss
 @function invert($color, $amount: 100%) {
@@ -192,7 +199,7 @@ $primary-color: #036;
 
 A medida que o projeto vai crescendo e ficando mais complexo, a quantidade de arquivos vai aumentando, e ter uma boa organização se torna algo essencial para a qualidade do projeto.
 
-Neste tutorial introdutorio, irei utilizar uma estrutura simples por ser um projeto pequeno, para se aprofundar melhor no assunto veja esse tutorial completo sobre [**madeiras de estruturar o SASS**](https://edrodrigues.com.br/blog/2-maneiras-mais-inteligentes-de-estruturar-o-sass/).
+Neste tutorial introdutorio, irei utilizar uma estrutura simples por ser um projeto pequeno, para se aprofundar melhor no assunto, veja esse tutorial completo sobre [**madeiras de estruturar o SASS**](https://edrodrigues.com.br/blog/2-maneiras-mais-inteligentes-de-estruturar-o-sass/).
 
 ### **Estrutura Simples**
 
@@ -208,8 +215,18 @@ _main.sass - Esse arquivo será responsável pelas importações dos demais arqu
 ```
 [Retornar ao topo](#topo)
 
+
+<a id="projeto"></a>
+## **Mini-Projeto**
+
+[Retornar ao topo](#topo)
+
+<a id="referencias"></a>
+
 # Referências:
 
 - Documetação Oficial do Sass: [**Sass-lang.com/documentation**](https://sass-lang.com/documentation/).
 - Documentação do Sass em português: [**Introdução ao Sass**](https://devschannel.com/sass/introducao-ao-sass).
 - Tutorial sobre Estruturas de aquivos em Sass: [**2 Maneiras mais inteligente de estruturar o Sass**](https://edrodrigues.com.br/blog/2-maneiras-mais-inteligentes-de-estruturar-o-sass/).
+
+[Retornar ao topo](#topo)
