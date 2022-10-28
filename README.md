@@ -226,6 +226,8 @@ _main.sass - Esse arquivo será responsável pelas importações dos demais arqu
 
 Além disso, é importante criar uma folha de estilo para cada página de seu site, caso tenha mais de uma, ela deve ser nomeada com o mesmo nome da página seguindo o padrão da estrutura assim: **_pagina.sass**.
 
+> Agora só um adendo importante. Originalmente a extensão usada nos arquivos era a **.SASS** mas atualmente a extensão oficial é a **.SCSS**, o que muda entre as duas? Somente um pouco da sintaxe, **.sass** não possuí chaves nem ponto e vírgula, mas a funcionalidade das duas é a mesma. Vou utilizar a extesão **.SCSS** por ter a sintaxe mais parecida com o CSS, mas fica a seu critério a qual usar.
+
 [Retornar ao topo](#topo)
 
 
