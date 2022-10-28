@@ -205,3 +205,9 @@ _componentes.sass - Aqui fica tudo que pode ser reutilizado como botões etc.
 _main.sass - Esse arquivo será responsável pelas importações dos demais arquivos acima.
 ```
 [Retornar ao topo](#topo)
+
+# Referências:
+
+- Documetação Oficial do Sass: [**Sass-lang.com/documentation**](https://sass-lang.com/documentation/).
+- Documentação do Sass em português: [**Introdução ao Sass**](https://devschannel.com/sass/introducao-ao-sass).
+- Tutorial sobre Estruturas de aquivos em Sass: [**2 Maneiras mais inteligente de estruturar o Sass**](https://edrodrigues.com.br/blog/2-maneiras-mais-inteligentes-de-estruturar-o-sass/).
