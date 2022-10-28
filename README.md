@@ -2,6 +2,11 @@
 
 <a name="topo"></a>
 
+### Requisitos:
+- HTML5
+- CSS3
+
+
 ## **Sumário**
  - [**Variáveis**](#variaveis)
  - [**Importação**](#importacao)
@@ -183,6 +188,20 @@ $primary-color: #036;
 
 ## **Estrutura de Arquivos**
 
-A medida que o projeto vai crescendo e tornando mais complexo, a qualitidade de arquivos vai aumentando, e uma boa organização se torna essencial.
+A medida que o projeto vai crescendo e ficando mais complexo, a quantidade de arquivos vai aumentando, e ter uma boa organização se torna algo essencial para a qualidade do projeto.
 
+Neste tutorial introdutorio, irei utilizar uma estrutura simples por ser um projeto pequeno, para se aprofundar melhor no assunto veja esse tutorial completo sobre [**madeiras de estruturar o SASS**](https://edrodrigues.com.br/blog/2-maneiras-mais-inteligentes-de-estruturar-o-sass/).
+
+### **Estrutura Simples**
+
+Melhor para projetos pequenos, essa estrutura divide a codificação dos estilos site em partes, dessa forma fica mais simples para fazer alterações e buscar blocos de código mais facilmente, melhor para codar e dar manutenção.
+
+A estrutura que vou utilizar é a seguinte:
+
+```
+_base.sass - Aqui é onde ficará as variáveis, os mixins e classes.
+_layout.sass - Aqui fica todo código que trata do layout da página.
+_componentes.sass - Aqui fica tudo que pode ser reutilizado como botões etc.
+_main.sass - Esse arquivo será responsável pelas importações dos demais arquivos acima.
+```
 [Retornar ao topo](#topo)
