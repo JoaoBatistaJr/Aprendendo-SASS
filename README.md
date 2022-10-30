@@ -1,21 +1,24 @@
+<a name="topo"></a>
 # **CSS com Super Poderes**
 
-<a name="topo"></a>
 
-### Requisitos:
+
+### Requisitos
+
 - HTML5
 - CSS3
 
 
 ## **Sumário**
- - [**Introdução**](#intro)
- - [**Variáveis**](#variaveis)
- - [**Importação**](#importacao)
- - [**Mixins**](#mixins)
- - [**Funções**](#funcoes)
- - [**Estrutura de Arquivos**](#estrutura)
- - [**Mini-Projeto**](#projeto)
- - [**Referências**](#referencias)
+
+- [**Introdução**](#intro)
+- [**Variáveis**](#variaveis)
+- [**Importação**](#importacao)
+- [**Mixins**](#mixins)
+- [**Funções**](#funcoes)
+- [**Estrutura de Arquivos**](#estrutura)
+- [**Mini-Projeto**](#projeto)
+- [**Referências**](#referencias)
 
 <img aling-itens="center" height="150px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" />
 
@@ -76,6 +79,8 @@ Agora usando Sass esse mesmo trecho de código fica assim:
 Essa funcionalidade se chama **Aninhamento**, onde em vez de criar vários blocos de código, um para cada alteração, com o Sass você faz toda a codificação do elemento dentro de somente um bloco de código. A primeira vista não parece ter mudado muito, mas imagine um arquivo CSS com centenas de linhas e vários blocos de código, ler e dar manutenção a cada bloco de codigo individualmente se torna bem mais trabalhoso sem o Sass.
 
 Mas não é só isso que é possível fazer com o Sass, também podemos criar **Variáveis**, **Importações**, **Mixins** e **Funções**. Tudo isso você irá ver no decorrer da leitura. E no final quando estivermos codando o mini-projeto, você irá entender melhor tudo isso.
+
+[Retornar ao topo](#topo)
 
 <a id="variaveis"></a>
 
@@ -220,7 +225,7 @@ A estrutura que vou utilizar é a seguinte:
 ```
 _base.sass - Aqui é onde ficará as variáveis, os mixins e classes.
 _layout.sass - Aqui fica todo código que trata do layout da página.
-_componentes.sass - Aqui fica tudo que pode ser reutilizado como botões etc.
+_components.sass - Aqui fica tudo que pode ser reutilizado como botões etc.
 _main.sass - Esse arquivo será responsável pelas importações dos demais arquivos acima.
 ```
 
@@ -238,7 +243,7 @@ Além disso, é importante criar uma folha de estilo para cada página de seu si
 
 <a id="referencias"></a>
 
-# Referências:
+## **Referências**
 
 - Documetação Oficial do Sass: [**Sass-lang.com/documentation**](https://sass-lang.com/documentation/).
 - Documentação do Sass em português: [**Introdução ao Sass**](https://devschannel.com/sass/introducao-ao-sass).
