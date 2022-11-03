@@ -226,7 +226,7 @@ A estrutura que vou utilizar é a seguinte:
 _base.sass - Aqui é onde ficará as variáveis, os mixins e classes.
 _layout.sass - Aqui fica todo código que trata do layout da página.
 _components.sass - Aqui fica tudo que pode ser reutilizado como botões etc.
-_main.sass - Esse arquivo será responsável pelas importações dos demais arquivos acima.
+main.sass - Repare que neste não usavos o simbolo **_**(soblinhado), esse arquivo será responsável pelas importações dos demais arquivos acima.
 ```
 
 Além disso, é importante criar uma folha de estilo para cada página de seu site, caso tenha mais de uma, ela deve ser nomeada com o mesmo nome da página seguindo o padrão da estrutura assim: **_pagina.sass**.
@@ -238,6 +238,71 @@ Além disso, é importante criar uma folha de estilo para cada página de seu si
 
 <a id="projeto"></a>
 ## **Mini-Projeto**
+
+Antes de começarmos a codar, precisamos fazer uma pequena configuração no nosso VS Code. Na aba de extensões, pesquise por [**Live Sass Compiler**](https://marketplace.visualstudio.com/items?itemName=glenn2223.live-sass), precisamos dessa extensão para compilar o Sass.
+
+Instale também a extensão [**Live Server**](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer), caso não a tenha, essa cria um servidor local para observar-mos as mudanças em tempo real.
+
+Feito isso, podemos começar nosso projeto. Primeiro vamos criar nosso arquivo **index.html** com sua estrutura básica.
+> **Dica:** para criar a estrutura básica do HTML5 basta digitar **!** dentro da página vazia, e uma opção aparecerá. Batas teclar Enter e a estrutura básica do HTML5 será criada.
+
+
+Esse é o código HTML que será criado:
+
+```html
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CSS com Super Poderes</title>
+</head>
+<body>
+		
+</body>
+</html>
+```
+Você pode adicionar um titulo de desejar.
+
+Agora iremos criar uma pasta chamada **css**, nela vamos criar as folhas de estilo de nossa estruta de arquivos sass. Crie os seguintes arquivos dentro da pasta:
+
+```
+_base.scss 
+_componentes.scss 
+_layout.scss
+main.scss
+```
+Feito isso, agora vou explicar como a compilação do sass funciona nos arquivos. Mas antes disso primeiro vamos abrir o arquivo **main.scss** e importar as outras folhas de estilo para ele, lembra que ele será o responsavel por juntar tudo.
+
+Veja abaixo e siga a importação na mesma sequência mostrada:
+
+```css
+@import 'base';
+@import 'components';
+@import 'layout';
+```
+Essa sequência é importante para o que será carregado primeiro em nossa página.
+
+Depois que fazer a importação abrir o no arquivo **_base.scss** e vamos adicionar um estilo qualquer só para verificar se tudo está pronto ao compilar-mos o nosso SASS, vou adicionar um reset simples para nossa página:
+
+```css
+*{
+  margin: 0px;
+  padding: 0px;
+}
+```
+
+Quando executarmos o compilador, o sass criará os arquivos **main.css** esse conterá todos os estilos dos outros arquivos .scss e estarão mimificados ou seja, será removido todos os estaços e tabulações deixando os codigos compactados, isso serve para economizar processamento na hora de carregar a página, e também criará um aquivo **main.css.map**.
+
+Antes de executar o compilador, vamos chamar o arquivo **main.css** dentro do html:
+
+```html
+<head>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+```
+Agora depois feito tudo isso, podemos excutar o nosso compilador, não se esqueça de salvar os arquivos e em seguida, na parte inferio do VS Code, na barra de status, você verá o botão da extensao Live Sass Compiler, clique em **Watch Sass** e espere compilar, é rapidinho, se estiver tudo certo aparecerá a saída com **Watching...** e seu sass já está funcionando e pronto para darmos início ao projeto.
 
 [Retornar ao topo](#topo)
 
