@@ -302,7 +302,7 @@ Antes de executar o compilador, vamos chamar o arquivo **main.css** dentro do ht
   <link rel="stylesheet" href="/css/main.css">
 </head>
 ```
-Agora depois feito tudo isso, podemos excutar o nosso compilador, não se esqueça de salvar os arquivos e em seguida, na parte inferio do VS Code, na barra de status, você verá o botão da extensao Live Sass Compiler, clique em **Watch Sass** e espere compilar, é rapidinho, se estiver tudo certo aparecerá a saída com **Watching...** e seu sass já está funcionando e pronto para darmos início ao projeto.
+Depois feito tudo isso, podemos executar o nosso compilador, não se esqueça de salvar os arquivos e em seguida, na parte inferio do VS Code, na barra de status, você verá o botão da extensao Live Sass Compiler, clique em **Watch Sass** e espere compilar, é rapidinho, se estiver tudo certo aparecerá a saída com **Watching...** e seu sass já está funcionando e pronto para darmos início ao projeto.
 
 [Retornar ao topo](#topo)
 
