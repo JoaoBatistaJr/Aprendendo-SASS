@@ -288,8 +288,9 @@ Depois que fazer a importação abrir o no arquivo **_base.scss** e vamos adicio
 
 ```css
 *{
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 ```
 

@@ -1,0 +1,59 @@
+.login-box form a {
+  display: inline-block; 
+  padding: 10px 20px; 
+  color: #ed2553;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: .5s;
+  margin-top: 40px;
+  border: 1px solid #ed2553;
+  border-radius: 6px;
+}
+
+.login-box a:hover {
+  background: #ed2553;
+  color: #fff;
+  border-radius: 5px;
+}
+
+/* Pulse Heart */
+
+@-webkit-keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.2, 1.2, 1.2);
+    transform: scale3d(1.2, 1.2, 1.2);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.faa-pulse.animated {
+  -webkit-animation: pulse 1s ease infinite;
+  animation: pulse 1s ease infinite;
+}
