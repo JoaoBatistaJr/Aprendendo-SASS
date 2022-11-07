@@ -303,7 +303,34 @@ Antes de executar o compilador, vamos chamar o arquivo **main.css** dentro do ht
   <link rel="stylesheet" href="/css/main.css">
 </head>
 ```
-Depois feito tudo isso, podemos executar o nosso compilador, não se esqueça de salvar os arquivos e em seguida, na parte inferio do VS Code, na barra de status, você verá o botão da extensao Live Sass Compiler, clique em **Watch Sass** e espere compilar, é rapidinho, se estiver tudo certo aparecerá a saída com **Watching...** e seu sass já está funcionando e pronto para darmos início ao projeto.
+Depois feito tudo isso, podemos executar o nosso compilador, não se esqueça de salvar os arquivos e em seguida, na parte inferio do VS Code, na barra de status, você verá o botão da extensao Live Sass Compiler, clique em **Watch Sass** e espere compilar, é rapidinho, se estiver tudo certo aparecerá a saída com **Watching...** e seu sass já está funcionando e pronto para darmos início ao nosso projeto.
+
+Para esse projeto, iremos criar um formulário de login, bem simples que nos ajudará a entender melhor os conceitos apresentados anteriormente.
+
+Vamos iniciar criando nosso formulário na página **index.html**, dentro do corpo do site (**body**), juntamente com cada classe que precisaremos usar pra estilizar nosso formulário.
+
+Veja abaixo:
+
+```html
+<body>
+	<div class="login-box">
+		<h2>Login</h2>
+		<form action="">
+			<div class="user-box">
+				<input type="text" name="user" required="required">
+				<label for="">Usuário</label>
+			</div>
+			<div class="user-box">
+				<input type="text" name="password" required="required">
+				<label for="">Senha</label>
+			</div>
+			<a href="">Entrar</a>
+		</form>
+	</div>
+</body>
+```
+
+Formulário criado, agora vamos começar a estiliza-lo, primeiro vamos abrir o **_base.scss**, nele vamos
 
 [Retornar ao topo](#topo)
 

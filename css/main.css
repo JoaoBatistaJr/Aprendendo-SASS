@@ -1,7 +1,3 @@
-html {
-  height: 100%;
-}
-
 body {
   margin: 0;
   padding: 0;
@@ -55,12 +51,6 @@ body {
 .faa-pulse.animated {
   -webkit-animation: pulse 1s ease infinite;
   animation: pulse 1s ease infinite;
-}
-
-.container {
-  display: flex;
-  justify-content: center;
-  margin: 0 15px;
 }
 
 .login-box {
