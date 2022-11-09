@@ -330,7 +330,102 @@ Veja abaixo:
 </body>
 ```
 
-Formulário criado, agora vamos começar a estiliza-lo, primeiro vamos abrir o **_base.scss**, nele vamos
+Formulário criado, agora vamos começar a estiliza-lo, primeiro vamos abrir o **_base.scss**, nele vamos adicionar algumas váriaveis, um reset simples para o **body** um **@mixin** para a tipografia.
+
+```scss
+$tipografia: font-family: Roboto;
+$cor_fundo: #e9e9e9;
+$cor_principal: #ed2553;
+$cor_secundaria: #666666;
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+@mixin tipografia($color, $size, $family){
+  $family:$tipografia;
+  $color:$cor_secundaria;
+  $size: font-size: 16px;
+}
+```
+Agora sempre que precisarmos usar uma cor, ou editar o estilo da tipografia do site, poderemos usar as variáveis e o **mixin.**
+
+O próximo que iremos editar será o **_layout.scss**, nele iremos tratar todo o estilo da interface da página, que no nosso caso é o formulário de loguin.
+
+```scss
+.login-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  box-sizing: border-box;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 6px;
+  h2 {
+    margin: 70px 50px 30px;
+    @include tipografia($size: 38px);
+    color: #ed2553;
+    padding: 0;
+    text-align: center;
+  }
+}
+
+.login-box .user-box {
+  position: relative;
+  input {
+    width: 100%;
+    padding: 10px 0;
+    @include tipografia($size: 16px, $color: #000);
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #ed2553;
+    outline: none;
+    background-color: transparent;
+  }
+  label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    @include tipografia($size: 16px, $color: #000);
+    pointer-events: none;
+    transition: .5s;
+  }
+}
+
+.login-box .user-box input:focus~label,
+.login-box .user-box input:valid~label {
+  top: -20px;
+  left: 0;
+  @include tipografia($size: 12px, $color: #ed2553);
+}
+```
+Agora vamos para a página **_components.scss**, nela iremos estilzar nosso unico componente que é o botão de entrar.
+
+```scss
+.login-box form a {
+  display: inline-block; 
+  padding: 10px 20px; 
+  color: #ed2553;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: .5s;
+  margin-top: 40px;
+  border: 1px solid #ed2553;
+  border-radius: 6px;
+}
+
+.login-box a:hover {
+  background: #ed2553;
+  color: #fff;
+  border-radius: 5px;
+}
+```
 
 [Retornar ao topo](#topo)
 
