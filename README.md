@@ -226,7 +226,8 @@ A estrutura que vou utilizar é a seguinte:
 _base.sass - Aqui é onde ficará as variáveis, os mixins e classes.
 _layout.sass - Aqui fica todo código que trata do layout da página.
 _components.sass - Aqui fica tudo que pode ser reutilizado como botões etc.
-main.sass - Repare que neste não usavos o simbolo **_**(soblinhado), esse arquivo será responsável pelas importações dos demais arquivos acima.
+main.sass - Repare que neste não usavos o simbolo **_**(soblinhado),
+esse arquivo será responsável pelas importações dos demais arquivos acima.
 ```
 
 Além disso, é importante criar uma folha de estilo para cada página de seu site, caso tenha mais de uma, ela deve ser nomeada com o mesmo nome da página seguindo o padrão da estrutura assim: **_pagina.sass**.
